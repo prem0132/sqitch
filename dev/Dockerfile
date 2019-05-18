@@ -44,7 +44,7 @@ RUN ./cpm install -L local --verbose --no-test --with-recommends --cpanfile src/
 # Build, test, bundle.
 WORKDIR $BUILDROOT/src
 RUN perl Build.PL --quiet --install_base /app --etcdir /etc \
-    --with sqlite --with postgres --with firebird \
+    --with sqlite --with postgres --with firebird --with snowflake --with odbc \
     && ./Build test && ./Build bundle
 
 # Copy to the final image without all the build stuff.

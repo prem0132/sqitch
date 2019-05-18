@@ -16,7 +16,7 @@ pipeline {
     }
     stage('docker build'){
         sh 'cd ./dev'
-        sh 'docker build -t premhashmap/sqitch:snowflake .'
+        sh 'docker build -t premhashmap/sqitch:snowflake ../ -f Dockerfile'
     }
     stage('docker push'){
         withCredentials([string(credentialsId: 'dockerhubPWD', variable: 'dockerpwd')]) {

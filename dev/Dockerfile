@@ -64,5 +64,6 @@ COPY --from=sqitch-build /etc /etc/
 ENV LESS -R
 ENV HOME /home
 WORKDIR /repo
-ENTRYPOINT ["/bin/sqitch"]
-CMD ["help"]
+ENTRYPOINT ["sh"]
+# ENTRYPOINT ["/bin/sqitch"]
+# CMD ["help"]

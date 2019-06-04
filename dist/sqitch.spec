@@ -14,7 +14,7 @@ BuildRequires:  perl(Carp)
 BuildRequires:  perl(Class::XSAccessor) >= 1.18
 BuildRequires:  perl(Clone)
 BuildRequires:  perl(Config)
-BuildRequires:  perl(Config::GitLike) >= 1.11
+BuildRequires:  perl(Config::GitLike) >= 1.15
 BuildRequires:  perl(constant)
 BuildRequires:  perl(DateTime) >= 1.04
 BuildRequires:  perl(DateTime::TimeZone)
@@ -85,7 +85,7 @@ BuildRequires:  perl(warnings)
 Requires:       perl(Class::XSAccessor) >= 1.18
 Requires:       perl(Clone)
 Requires:       perl(Config)
-Requires:       perl(Config::GitLike) >= 1.11
+Requires:       perl(Config::GitLike) >= 1.15
 Requires:       perl(constant)
 Requires:       perl(DateTime) >= 1.04
 Requires:       perl(DateTime::TimeZone)
@@ -305,6 +305,13 @@ also be installed.
 # No additional files required.
 
 %changelog
+* Tue Jun 4 2019 David E. Wheeler <david.wheeler@iovation.com> 1.0.0-1
+- Upgrade to v1.0.0.
+- Config::GitLike now requires v1.15.
+- Test::MockModule now requires v0.17.
+- Removed File::HomeDir.
+- Changed "sane" to "sensible" in the summary.
+
 * Fri Feb 1 2019 David E. Wheeler <david.wheeler@iovation.com> 0.9999-1
 - Upgrade to v0.9999.
 - Added requirement for IO::Pager 0.34 or higher.
